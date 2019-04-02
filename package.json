@@ -1,0 +1,16 @@
+{
+  "name": "@cabe/eslint-config",
+  "version": "0.1.0",
+  "description": "eslint config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitmap/eslint-config.git"
+  },
+  "author": "Cabe Branson (https://cabe.dev/)",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-plugin"
+  ]
+}
