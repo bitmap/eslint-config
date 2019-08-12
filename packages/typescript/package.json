@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "eslint config for typesecript",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bitmap/eslint-config.git"
@@ -14,11 +17,12 @@
     "eslint-plugin"
   ],
   "dependencies": {
-    "@cabe/eslint-config": "^1.0.1",
+    "@cabe/eslint-config": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0"
   },
   "peerDependencies": {
     "eslint": ">=5.0.0"
-  }
+  },
+  "gitHead": "1320230127497659691af21488ebce03a9bf6aef"
 }
