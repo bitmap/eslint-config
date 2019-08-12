@@ -1,6 +1,6 @@
 {
   "name": "@cabe/eslint-config-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "eslint config for typesecript",
   "main": "index.js",
   "publishConfig": {
@@ -17,7 +17,7 @@
     "eslint-plugin"
   ],
   "dependencies": {
-    "@cabe/eslint-config": "^1.0.0",
+    "@cabe/eslint-config": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0"
   },
