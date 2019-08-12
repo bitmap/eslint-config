@@ -98,8 +98,8 @@ module.exports = {
         object: true,
       },
     }, {
-      enforceForRenamedProperties: false,
-    }],
+        enforceForRenamedProperties: false,
+      }],
     'prefer-numeric-literals': 2,
     'prefer-reflect': 'off',
     'prefer-rest-params': 2,
