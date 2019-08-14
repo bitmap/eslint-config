@@ -18,8 +18,8 @@
   ],
   "dependencies": {
     "@cabe/eslint-config": "^1.0.1",
-    "@typescript-eslint/eslint-plugin": "^1.9.0",
-    "@typescript-eslint/parser": "^1.9.0"
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0"
   },
   "peerDependencies": {
     "eslint": ">=5.0.0"

@@ -2,10 +2,10 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'plugin:@typescript-eslint/recommended',
-    '@cabe'
+    '@cabe',
   ],
   plugins: [
-    '@typescript-eslint'
+    '@typescript-eslint',
   ],
   rules: {
     'indent': 0,
@@ -15,21 +15,21 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/explicit-member-accessibility': [2, {
-      'accessibility': 'no-public'
+      accessibility: 'no-public',
     }],
     '@typescript-eslint/member-delimiter-style': [2, {
-      'multiline': {
-        'delimiter': 'none',
-        'requireLast': true,
+      multiline: {
+        delimiter: 'none',
+        requireLast: true,
       },
-      'singleline': {
-        'delimiter': 'semi',
-        'requireLast': false,
+      singleline: {
+        delimiter: 'semi',
+        requireLast: false,
       },
     }],
     '@typescript-eslint/explicit-function-return-type': [2, {
-      'allowExpressions': true,
-      'allowTypedFunctionExpressions': true,
+      allowExpressions: true,
+      allowTypedFunctionExpressions: true,
     }],
   },
 }
