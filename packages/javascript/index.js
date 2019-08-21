@@ -37,6 +37,7 @@ module.exports = {
     'lines-between-class-members': [2, 'always', {
       exceptAfterSingleLine: true,
     }],
+    'multiline-comment-style': [2, 'starred-block'],
     'new-cap': 2,
     'new-parens': 2,
     'no-await-in-loop': 2,
