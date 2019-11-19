@@ -17,6 +17,7 @@ module.exports = {
     'comma-dangle': [2, 'always-multiline'],
     'comma-spacing': 2,
     'comma-style': 2,
+    'consistent-this': [2, 'that'],
     'constructor-super': 2,
     'default-case': 2,
     'dot-notation': 2,
@@ -109,6 +110,7 @@ module.exports = {
     'prefer-template': 2,
     'quote-props': [2, 'consistent-as-needed'],
     'quotes': [2, 'single'],
+    'radix': 2,
     'rest-spread-spacing': [2, 'never'],
     'semi': [2, 'never'],
     'space-before-function-paren': [2, {
