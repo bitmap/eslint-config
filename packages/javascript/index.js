@@ -58,6 +58,7 @@ module.exports = {
     }],
     'no-new-func': 2,
     'no-new-wrappers': 2,
+    'no-param-reassign': 2,
     'no-plusplus': 2,
     'no-return-assign': [2, 'always'],
     'no-return-await': 2,
