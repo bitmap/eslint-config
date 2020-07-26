@@ -2,9 +2,14 @@
 
 ## Install
 
+### JavaScript
+
 ```sh
-npm install --save-dev @cabe/eslint-config
-npm install --save-dev @cabe/eslint-config-typescript
+npm install --save-dev eslint @cabe/eslint-config
+```
+
+```sh
+npm install --save-dev eslint @cabe/eslint-config @cabe/eslint-config-typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
 ## .eslintrc
