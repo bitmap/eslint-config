@@ -1,15 +1,19 @@
-__Install__
-```
+# eslint config
+
+## Install
+
+```sh
 npm install --save-dev @cabe/eslint-config
 npm install --save-dev @cabe/eslint-config-typescript
 ```
 
-__.eslintrc__
+## .eslintrc
+
 ```json
 {
   "extends": [
     "@cabe",
-    "@cabe/typescript",
+    "@cabe/typescript"
    ]
 }
 ```
