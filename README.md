@@ -21,11 +21,10 @@ npm install --save-dev eslint @cabe/eslint-config @babel/core @babel/eslint-pars
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2021,
-    "ecmaFeatures": { "jsx": false },
-    "sourceType": "module",
+    "sourceType": "module"
   },
   "plugins": [],
-  "settings": {},
+  "settings": {}
 }
 ```
 
@@ -48,17 +47,14 @@ npm install --save-dev eslint @cabe/eslint-config @cabe/eslint-config-typescript
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2021,
-    "ecmaFeatures": { "jsx": false },
-    "sourceType": "module",
+    "sourceType": "module"
   },
   "plugins": ["@typescript-eslint"],
-  "settings": {},
+  "settings": {}
 }
 ```
 
 ### React
-
-#### .eslintrc
 
 ```sh
 npm install --save-dev eslint @cabe/eslint-config @babel/core @babel/eslint-parser eslint-plugin-react eslint-plugin-react-hooks
@@ -76,17 +72,19 @@ npm install --save-dev eslint @cabe/eslint-config @babel/core @babel/eslint-pars
   "extends": [
     "@cabe",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2021,
-    "ecmaFeatures": { "jsx": true },
-    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
   },
   "plugins": [
     "react",
-    "react-hooks",
+    "react-hooks"
   ],
   "settings": {
     "react": {
