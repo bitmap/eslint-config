@@ -3,13 +3,7 @@
   "version": "1.0.6",
   "description": "eslint config",
   "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bitmap/eslint-config.git"
-  },
+  "repository": "github:bitmap/eslint-config",
   "author": "Cabe Branson (https://cabe.dev/)",
   "license": "MIT",
   "keywords": [
@@ -17,6 +11,6 @@
     "eslint-plugin"
   ],
   "peerDependencies": {
-    "eslint": "^6.x || ^7.0.0"
+    "eslint": "*"
   }
 }

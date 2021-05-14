@@ -1,6 +1,8 @@
 {
   "root": true,
-  "extends": [
-    "./packages/javascript"
-  ]
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "extends": ["./packages/javascript"]
 }

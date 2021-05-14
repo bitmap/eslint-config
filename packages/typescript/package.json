@@ -3,13 +3,7 @@
   "version": "1.0.6",
   "description": "eslint config for typesecript",
   "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bitmap/eslint-config.git"
-  },
+  "repository": "github:bitmap/eslint-config",
   "author": "Cabe Branson (https://cabe.dev/)",
   "license": "MIT",
   "keywords": [
@@ -18,8 +12,8 @@
   ],
   "peerDependencies": {
     "@cabe/eslint-config": "*",
-    "@typescript-eslint/eslint-plugin": "^2.0.0 || ^3.0.0",
-    "@typescript-eslint/parser": "^2.0.0 || ^3.0.0",
-    "eslint": "^6.x || ^7.0.0"
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*"
   }
 }
