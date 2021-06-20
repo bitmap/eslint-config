@@ -1,6 +1,6 @@
 {
   "name": "@cabe/eslint-config-typescript",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "eslint config for typesecript",
   "main": "index.js",
   "repository": "github:bitmap/eslint-config",
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@cabe/eslint-config": "latest",
-    "@typescript-eslint/parser": "^4.20.0",
-    "@typescript-eslint/eslint-plugin": "^4.27.0"
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.20.0"
   }
 }
