@@ -11,9 +11,11 @@
     "eslint-plugin"
   ],
   "peerDependencies": {
-    "@cabe/eslint-config": "*",
-    "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*",
     "eslint": "*"
+  },
+  "dependencies": {
+    "@cabe/eslint-config": "latest",
+    "@typescript-eslint/parser": "^4.20.0",
+    "@typescript-eslint/eslint-plugin": "^4.27.0"
   }
 }

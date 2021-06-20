@@ -1,18 +1,24 @@
 module.exports = {
-  extends: ["@cabe"],
+  extends: "@cabe",
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
+    warnOnUnsupportedTypeScriptVersion: true,
+  },
+  plugins: ["@typescript-eslint"],
   rules: {
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/ban-ts-comment": "error",
     "@typescript-eslint/ban-types": "error",
     "@typescript-eslint/explicit-module-boundary-types": "warn",
-    "no-array-constructor": "off",
     "@typescript-eslint/no-array-constructor": "error",
-    "no-empty-function": "off",
     "@typescript-eslint/no-empty-function": "error",
     "@typescript-eslint/no-empty-interface": "error",
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-extra-non-null-assertion": "error",
-    "no-extra-semi": "off",
     "@typescript-eslint/no-extra-semi": "error",
     "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/no-misused-new": "error",
@@ -20,7 +26,6 @@ module.exports = {
     "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
     "@typescript-eslint/no-non-null-assertion": "warn",
     "@typescript-eslint/no-this-alias": "error",
-    "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-var-requires": "error",
     "@typescript-eslint/prefer-as-const": "error",
@@ -34,15 +39,18 @@ module.exports = {
     }],
   },
   overrides: [{
-    files: ["*.ts", "*.tsx"],
+    files: ["**/*.ts?(x)"],
     rules: {
       "constructor-super": "off", // ts(2335) & ts(2377)
       "getter-return": "off", // ts(2378)
       "indent": "off",
+      "no-array-constructor": "off",
       "no-const-assign": "off", // ts(2588)
       "no-dupe-args": "off", // ts(2300)
       "no-dupe-class-members": "off", // ts(2393) & ts(2300)
       "no-dupe-keys": "off", // ts(1117)
+      "no-empty-function": "off",
+      "no-extra-semi": "off",
       "no-func-assign": "off", // ts(2539)
       "no-import-assign": "off", // ts(2539) & ts(2540)
       "no-new-symbol": "off", // ts(2588)
