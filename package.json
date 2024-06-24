@@ -1,12 +1,10 @@
 {
   "name": "root",
   "private": true,
-  "scripts": {
-    "version": "lerna version",
-    "publish": "lerna publish"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "eslint": "latest",
-    "lerna": "latest"
+    "eslint": "8"
   }
 }
