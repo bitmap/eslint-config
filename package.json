@@ -6,7 +6,10 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "publish:js": "npm publish --workspace=@cabe/eslint-config --access=public",
+    "publish:ts": "npm publish --workspace=@cabe/eslint-config-typescript --access=public",
+    "publish:all": "npm publish --workspaces --access=public"
   },
   "devDependencies": {
     "eslint": "^9.28.0"
