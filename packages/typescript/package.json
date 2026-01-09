@@ -17,7 +17,7 @@
     "typescript": ">=5.0.0"
   },
   "dependencies": {
-    "@cabe/eslint-config": "latest",
+    "@cabe/eslint-config": "*",
     "typescript-eslint": "^8.33.0"
   }
 }

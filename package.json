@@ -1,14 +1,14 @@
 {
-  "name": "root",
+  "name": "eslint-config",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "version": "lerna version",
-    "publish": "lerna publish",
     "lint": "eslint ."
   },
   "devDependencies": {
-    "eslint": "^9.28.0",
-    "lerna": "^8.2.2"
+    "eslint": "^9.28.0"
   }
 }
