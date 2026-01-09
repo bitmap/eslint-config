@@ -1,12 +1,17 @@
 {
-  "name": "root",
+  "name": "eslint-config",
   "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "version": "lerna version",
-    "publish": "lerna publish"
+    "lint": "eslint .",
+    "publish:js": "npm publish --workspace=@cabe/eslint-config --access=public",
+    "publish:ts": "npm publish --workspace=@cabe/eslint-config-typescript --access=public",
+    "publish:all": "npm publish --workspaces --access=public"
   },
   "devDependencies": {
-    "eslint": "latest",
-    "lerna": "latest"
+    "eslint": "^9.28.0"
   }
 }

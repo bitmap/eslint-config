@@ -1,21 +1,23 @@
 {
   "name": "@cabe/eslint-config-typescript",
-  "version": "1.1.2",
-  "description": "eslint config for typesecript",
+  "version": "2.0.0",
+  "description": "eslint flat config for typescript",
   "main": "index.js",
+  "type": "module",
   "repository": "github:bitmap/eslint-config",
   "author": "Cabe Branson (https://cabe.dev/)",
   "license": "MIT",
   "keywords": [
     "eslint",
-    "eslint-plugin"
+    "eslint-config",
+    "typescript"
   ],
   "peerDependencies": {
-    "eslint": "*"
+    "eslint": ">=9.0.0",
+    "typescript": ">=5.0.0"
   },
   "dependencies": {
-    "@cabe/eslint-config": "latest",
-    "@typescript-eslint/eslint-plugin": "^4.27.0",
-    "@typescript-eslint/parser": "^4.20.0"
+    "@cabe/eslint-config": "*",
+    "typescript-eslint": "^8.33.0"
   }
 }

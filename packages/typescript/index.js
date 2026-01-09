@@ -1,25 +1,27 @@
-module.exports = {
-  extends: "@cabe",
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    sourceType: "module",
-    ecmaFeatures: {
-      jsx: true,
+import tseslint from "typescript-eslint";
+import baseConfig from "@cabe/eslint-config";
+
+export default tseslint.config(...baseConfig, {
+  files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
+  extends: [...tseslint.configs.recommended],
+  languageOptions: {
+    parser: tseslint.parser,
+    parserOptions: {
+      sourceType: "module",
+      ecmaFeatures: {
+        jsx: true,
+      },
+      warnOnUnsupportedTypeScriptVersion: true,
     },
-    warnOnUnsupportedTypeScriptVersion: true,
   },
-  plugins: ["@typescript-eslint"],
   rules: {
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/ban-ts-comment": "error",
-    "@typescript-eslint/ban-types": "error",
-    "@typescript-eslint/explicit-module-boundary-types": "warn",
     "@typescript-eslint/no-array-constructor": "error",
     "@typescript-eslint/no-empty-function": "error",
-    "@typescript-eslint/no-empty-interface": "error",
+    "@typescript-eslint/no-empty-object-type": "error",
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-extra-non-null-assertion": "error",
-    "@typescript-eslint/no-extra-semi": "error",
     "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/no-misused-new": "error",
     "@typescript-eslint/no-namespace": "error",
@@ -27,47 +29,45 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": "warn",
     "@typescript-eslint/no-this-alias": "error",
     "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/prefer-as-const": "error",
     "@typescript-eslint/prefer-namespace-keyword": "error",
     "@typescript-eslint/triple-slash-reference": "error",
-    "@typescript-eslint/explicit-member-accessibility": ["error", {
-      accessibility: "no-public",
-    }],
-    "@typescript-eslint/explicit-function-return-type": ["error", {
-      allowExpressions: true,
-    }],
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
+      {
+        accessibility: "no-public",
+      },
+    ],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        allowExpressions: true,
+      },
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "warn",
+
+    // Disable base rules that are covered by TypeScript
+    "constructor-super": "off",
+    "getter-return": "off",
+    "no-array-constructor": "off",
+    "no-const-assign": "off",
+    "no-dupe-args": "off",
+    "no-dupe-class-members": "off",
+    "no-dupe-keys": "off",
+    "no-empty-function": "off",
+    "no-func-assign": "off",
+    "no-import-assign": "off",
+    "no-new-symbol": "off",
+    "no-obj-calls": "off",
+    "no-redeclare": "off",
+    "no-setter-return": "off",
+    "no-this-before-super": "off",
+    "no-undef": "off",
+    "no-unreachable": "off",
+    "no-unsafe-negation": "off",
+    "no-unused-vars": "off",
+    "no-use-before-define": "off",
+    "valid-typeof": "off",
   },
-  overrides: [{
-    files: ["**/*.ts?(x)"],
-    rules: {
-      "constructor-super": "off", // ts(2335) & ts(2377)
-      "getter-return": "off", // ts(2378)
-      "indent": "off",
-      "no-array-constructor": "off",
-      "no-const-assign": "off", // ts(2588)
-      "no-dupe-args": "off", // ts(2300)
-      "no-dupe-class-members": "off", // ts(2393) & ts(2300)
-      "no-dupe-keys": "off", // ts(1117)
-      "no-empty-function": "off",
-      "no-extra-semi": "off",
-      "no-func-assign": "off", // ts(2539)
-      "no-import-assign": "off", // ts(2539) & ts(2540)
-      "no-new-symbol": "off", // ts(2588)
-      "no-obj-calls": "off", // ts(2349)
-      "no-redeclare": "off", // ts(2451)
-      "no-setter-return": "off", // ts(2408)
-      "no-this-before-super": "off", // ts(2376)
-      "no-undef": "off", // ts(2304)
-      "no-unreachable": "off", // ts(7027)
-      "no-unsafe-negation": "off", // ts(2365) & ts(2360) & ts(2358)
-      "no-unused-vars": "off",
-      "no-use-before-define": "off",
-      "no-var": "error", // ts transpiles let/const to var, so no need for vars any more
-      "prefer-const": "error", // ts provides better types with const
-      "prefer-rest-params": "error", // ts provides better types with rest args over arguments
-      "prefer-spread": "error", // ts transpiles spread to apply, so no need for manual apply
-      "valid-typeof": "off", // ts(2367)
-    },
-  }],
-};
+});

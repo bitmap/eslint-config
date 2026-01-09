@@ -1,95 +1,97 @@
 # eslint config
 
+ESLint 9 flat config for JavaScript and TypeScript projects.
+
+## Requirements
+
+- Node.js >= 18.18.0
+- ESLint >= 9.0.0
+
 ## Install
 
 ### JavaScript
 
 ```sh
-npm install --save-dev eslint @cabe/eslint-config @babel/core @babel/eslint-parser
+npm install --save-dev eslint @cabe/eslint-config
 ```
 
-#### .eslintrc
+#### eslint.config.js
 
-```json
-{
-  "env": {
-    "node": true,
-    "browser": true,
-    "es6": true
+```js
+import baseConfig from "@cabe/eslint-config";
+
+export default [
+  ...baseConfig,
+  {
+    // your custom config here
   },
-  "extends": ["@cabe"],
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "ecmaVersion": 2021,
-    "sourceType": "module"
-  },
-  "plugins": [],
-  "settings": {}
-}
+];
 ```
 
 ### TypeScript
 
 ```sh
-npm install --save-dev eslint @cabe/eslint-config @cabe/eslint-config-typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev eslint typescript @cabe/eslint-config-typescript
 ```
 
-#### .eslintrc
+#### eslint.config.js
 
-```json
-{
-  "env": {
-    "node": true,
-    "browser": true,
-    "es6": true
-  },
-  "extends": ["@cabe/typescript"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2021,
-    "sourceType": "module"
-  },
-  "plugins": ["@typescript-eslint"],
-  "settings": {}
-}
+```js
+import tsConfig from "@cabe/eslint-config-typescript";
+
+export default tsConfig;
 ```
 
-### React
+Or with customizations:
+
+```js
+import tseslint from "typescript-eslint";
+import tsConfig from "@cabe/eslint-config-typescript";
+
+export default tseslint.config(...tsConfig, {
+  // your custom config here
+});
+```
+
+### React (with TypeScript)
 
 ```sh
-npm install --save-dev eslint @cabe/eslint-config @babel/core @babel/eslint-parser eslint-plugin-react eslint-plugin-react-hooks
+npm install --save-dev eslint typescript @cabe/eslint-config-typescript eslint-plugin-react eslint-plugin-react-hooks
 ```
 
-#### .eslintrc
+#### eslint.config.js
 
-```json
-{
-  "env": {
-    "node": true,
-    "browser": true,
-    "es6": true
+```js
+import tseslint from "typescript-eslint";
+import tsConfig from "@cabe/eslint-config-typescript";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+
+export default tseslint.config(...tsConfig, {
+  plugins: {
+    react,
+    "react-hooks": reactHooks,
   },
-  "extends": [
-    "@cabe",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
-  ],
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "ecmaVersion": 2021,
-    "ecmaFeatures": {
-      "jsx": true
+  settings: {
+    react: {
+      version: "detect",
     },
-    "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "react-hooks"
-  ],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }
-}
+  rules: {
+    ...react.configs.recommended.rules,
+    ...reactHooks.configs.recommended.rules,
+  },
+});
 ```
+
+## Migration from v1.x
+
+Version 2.0.0 updates to ESLint 9's flat config format. Key changes:
+
+- Config file is now `eslint.config.js` (not `.eslintrc`)
+- Uses ES modules (`import`/`export`)
+- No more `extends` string arrays - import and spread configs directly
+- `env` is replaced by `globals` in `languageOptions`
+- `parser` is now set in `languageOptions.parser`
+
+See the [ESLint migration guide](https://eslint.org/docs/latest/use/configure/migration-guide) for more details.
