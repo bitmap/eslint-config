@@ -1,12 +1,14 @@
 {
   "name": "root",
   "private": true,
+  "type": "module",
   "scripts": {
     "version": "lerna version",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "eslint": "latest",
-    "lerna": "latest"
+    "eslint": "^9.28.0",
+    "lerna": "^8.2.2"
   }
 }

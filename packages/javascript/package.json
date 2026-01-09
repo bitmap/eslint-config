@@ -1,16 +1,25 @@
 {
   "name": "@cabe/eslint-config",
-  "version": "1.1.1",
-  "description": "eslint config",
+  "version": "2.0.0",
+  "description": "eslint flat config for JavaScript",
   "main": "index.js",
+  "type": "module",
   "repository": "github:bitmap/eslint-config",
   "author": "Cabe Branson (https://cabe.dev/)",
   "license": "MIT",
   "keywords": [
     "eslint",
-    "eslint-plugin"
+    "eslint-config",
+    "eslint-flat-config"
   ],
   "peerDependencies": {
-    "eslint": "*"
+    "eslint": ">=9.0.0"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.28.0",
+    "globals": "^16.1.0"
+  },
+  "engines": {
+    "node": ">=18.18.0"
   }
 }
