@@ -12,6 +12,7 @@
     "publish:all": "npm publish --workspaces --access=public"
   },
   "devDependencies": {
-    "eslint": "^9.28.0"
+    "eslint": "^9.28.0",
+    "typescript": "^5.9.3"
   }
 }
