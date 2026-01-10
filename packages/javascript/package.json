@@ -1,9 +1,18 @@
 {
   "name": "@cabe/eslint-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "eslint flat config for JavaScript",
-  "main": "index.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
   "repository": "github:bitmap/eslint-config",
   "author": "Cabe Branson (https://cabe.dev/)",
   "license": "MIT",
